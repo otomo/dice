@@ -1,4 +1,8 @@
-	<p>
-	<%= link_to "サイコロを振る", :action => "shake" %>
-	</p>
+	<h2>履歴</h2>
+	<p>最新5件を表示 (<%= @time %> )
+	<ul>
+		<% @rolls.each do |roll| -%>
+		<li><%= roll.value -%></li>
+		<% end -%>
+	</ul>
 
